@@ -1,0 +1,94 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+
+  &__container {
+    position: relative;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+  }
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      font-size: 1rem;
+      color: var(--color-text);
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  // Hamburger button — hidden on desktop
+  &__toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+
+    span {
+      display: block;
+      width: 1.5rem;
+      height: 2px;
+      background-color: var(--color-text);
+      transition: transform 0.25s, opacity 0.25s;
+    }
+
+    // Animate into × when open
+    &.is-open {
+      span:nth-child(1) { transform: translateY(0.43rem) rotate(45deg); }
+      span:nth-child(2) { opacity: 0; }
+      span:nth-child(3) { transform: translateY(-0.43rem) rotate(-45deg); }
+    }
+  }
+
+  // Mobile styles
+  @media (max-width: 48rem) {
+    &__toggle {
+      display: flex;
+    }
+
+    &__nav {
+      display: none;
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      right: 0;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1.5rem 2rem;
+
+      &.is-open {
+        display: block;
+      }
+    }
+
+    &__links {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+  }
+}

@@ -1,9 +1,10 @@
+import Navbar from './cmps/Navbar'
 import './App.scss'
 
 function App() {
   return (
     <div className="app">
-      <h1>Portfolio coming soon</h1>
+      <Navbar />
     </div>
   )
 }
