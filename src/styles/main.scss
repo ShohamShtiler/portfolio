@@ -1,0 +1,11 @@
+// Entry point — imports all style partials in order
+
+// 1. Setup (variables must come first so CSS vars are defined)
+@use 'setup/variables';
+
+// 2. Base (reset and typography)
+@use 'base/reset';
+@use 'base/typography';
+
+// 3. Layout
+@use 'layout/layout';

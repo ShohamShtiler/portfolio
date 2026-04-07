@@ -1,0 +1,13 @@
+// Global CSS custom properties
+// These are available everywhere via var(--...)
+
+:root {
+  // Colors
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+
+  // Typography
+  --font-base: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+}
