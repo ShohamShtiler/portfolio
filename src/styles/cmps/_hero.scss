@@ -1,0 +1,201 @@
+.hero {
+  min-height: calc(100svh - 4rem);
+  display: flex;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2xl);
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+  }
+
+  // ── Left: text content ──────────────────────────────────────────
+
+  &__content {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  &__greeting {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+  }
+
+  &__dot {
+    color: var(--color-accent);
+  }
+
+  &__intro-wrap {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+
+    &::before {
+      content: '';
+      display: block;
+      width: 2.5rem;
+      height: 2px;
+      background-color: var(--color-accent);
+      flex-shrink: 0;
+    }
+  }
+
+  &__intro {
+    font-size: var(--font-size-xl);
+    font-weight: 400;
+    color: var(--color-text);
+    line-height: 1;
+  }
+
+  &__role {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    line-height: 1.1;
+    margin-top: -0.25rem;
+  }
+
+  &__bio {
+    font-size: var(--font-size-md);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    max-width: 30rem;
+    margin-top: var(--spacing-xs);
+  }
+
+  &__ctas {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
+    flex-wrap: wrap;
+  }
+
+  // ── Right: code card ────────────────────────────────────────────
+
+  &__visual {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__code-card {
+    width: 100%;
+    max-width: 26rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 0 3rem rgba(232, 97, 77, 0.07);
+    overflow: hidden;
+  }
+
+  &__code-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0.875rem var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+
+  &__code-dots {
+    display: flex;
+    gap: 0.375rem;
+
+    span {
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      background-color: var(--color-border);
+
+      &:nth-child(1) { background-color: #e8614d; }
+      &:nth-child(2) { background-color: #e8b84d; }
+      &:nth-child(3) { background-color: #4dae6e; }
+    }
+  }
+
+  &__code-filename {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+  }
+
+  &__code-body {
+    padding: var(--spacing-md) var(--spacing-md);
+    font-family: var(--font-mono);
+    font-size: 0.925rem;
+    line-height: 1.9;
+  }
+
+  &__line {
+    display: block;
+
+    &--in {
+      padding-left: 1.5rem;
+    }
+  }
+
+  // Syntax colors
+  .c-kw   { color: #c084fc; }   // keyword — purple
+  .c-var  { color: #60a5fa; }   // variable name — blue
+  .c-prop { color: #60a5fa; }   // property — blue
+  .c-str  { color: #86efac; }   // string — green
+  .c-bool { color: var(--color-accent); }  // boolean — coral
+  .c-base { color: var(--color-text); }    // default
+
+  // ── Responsive ──────────────────────────────────────────────────
+
+  @media (max-width: 48rem) {
+    &__container {
+      flex-direction: column;
+      gap: var(--spacing-xl);
+      padding-top: var(--spacing-xl);
+      padding-bottom: var(--spacing-xl);
+    }
+
+    &__content {
+      flex: none;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__greeting {
+      font-size: var(--font-size-2xl);
+    }
+
+    &__role {
+      font-size: var(--font-size-xl);
+    }
+
+    &__intro-wrap {
+      justify-content: center;
+    }
+
+    &__bio {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    &__ctas {
+      justify-content: center;
+    }
+
+    &__visual {
+      flex: none;
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__code-card {
+      max-width: 100%;
+    }
+  }
+}

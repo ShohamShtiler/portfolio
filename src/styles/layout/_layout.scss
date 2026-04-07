@@ -1,2 +1,7 @@
-// Layout styles — page structure, containers, grid
-// Will be filled in as the UI is built
+// Layout — page structure and shared container
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
