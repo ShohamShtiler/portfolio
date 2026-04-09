@@ -1,3 +1,5 @@
+import portraitImg from '../assets/portrait3.png'
+
 function Hero() {
   return (
     <section id="home" className="hero">
@@ -33,53 +35,13 @@ function Hero() {
         </div>
 
         <div className="hero__visual">
-          <div className="hero__code-card">
-            <div className="hero__code-header">
-              <div className="hero__code-dots">
-                <span />
-                <span />
-                <span />
-              </div>
-              <span className="hero__code-filename">portfolio.js</span>
-            </div>
-
-            <div className="hero__code-body">
-              <div className="hero__line">
-                <span className="c-kw">const</span>
-                <span className="c-var"> developer</span>
-                <span className="c-base"> = {'{'}</span>
-              </div>
-              <div className="hero__line hero__line--in">
-                <span className="c-prop">name</span>
-                <span className="c-base">: </span>
-                <span className="c-str">"Shoham Shtiler"</span>
-                <span className="c-base">,</span>
-              </div>
-              <div className="hero__line hero__line--in">
-                <span className="c-prop">role</span>
-                <span className="c-base">: </span>
-                <span className="c-str">"Full-Stack Developer"</span>
-                <span className="c-base">,</span>
-              </div>
-              <div className="hero__line hero__line--in">
-                <span className="c-prop">stack</span>
-                <span className="c-base">: [</span>
-                <span className="c-str">"React"</span>
-                <span className="c-base">, </span>
-                <span className="c-str">"Node.js"</span>
-                <span className="c-base">, </span>
-                <span className="c-str">"JS"</span>
-                <span className="c-base">],</span>
-              </div>
-              <div className="hero__line hero__line--in">
-                <span className="c-prop">available</span>
-                <span className="c-base">: </span>
-                <span className="c-bool">true</span>
-                <span className="c-base">,</span>
-              </div>
-              <div className="hero__line">
-                <span className="c-base">{'}'}</span>
-              </div>
+          <div className="hero__portrait">
+            <div className="hero__portrait-frame">
+              <img
+                src={portraitImg}
+                alt="Shoham Shtiler"
+                className="hero__portrait-img"
+              />
             </div>
           </div>
         </div>
