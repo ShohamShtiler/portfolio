@@ -1,4 +1,4 @@
-import portraitImg from '../assets/portrait3.png'
+import portraitImg from '../assets/portrait.png'
 
 function Hero() {
   return (
