@@ -2,6 +2,7 @@ import Navbar from './cmps/Navbar'
 import Hero from './pages/Hero'
 import SkillsStrip from './pages/SkillsStrip'
 import Projects from './pages/Projects'
+import About from './pages/About'
 import './App.scss'
 
 import '@fontsource/montserrat/700.css'
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <SkillsStrip />
         <Projects />
+        <About />
       </main>
     </div>
   )

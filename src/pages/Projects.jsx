@@ -71,8 +71,12 @@ function Projects() {
     <section id="projects" className="projects">
       <div className="container">
         <div className="section-header">
-          <p className="section-label">Work</p>
           <h2 className="section-title">Projects</h2>
+          {/* Vertical indicator added here */}
+          <div className="section-divider">
+            <span className="line"></span>
+            <span className="dot"></span>
+          </div>
         </div>
 
         <div className="projects__list">
