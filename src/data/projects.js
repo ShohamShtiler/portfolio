@@ -1,8 +1,8 @@
-import mindayImg from '../assets/image.png'
+import mindayImg from '../assets/minday.png'
 import mistertoyImg from '../assets/mistertoy.png'
-import minesweeperImg from '../assets/test5.png'
+import minesweeperImg from '../assets/minesweeper.png'
 import gmailImg from '../assets/gmail.png'
-import momentumImg from '../assets/momentum.png'
+import momentumImg from '../assets/wip.png'
 
 export const projects = [
   {

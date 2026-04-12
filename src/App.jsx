@@ -3,6 +3,7 @@ import Hero from './pages/Hero'
 import SkillsStrip from './pages/SkillsStrip'
 import Projects from './pages/Projects'
 import About from './pages/About'
+import Contact from './pages/Contact'
 import './App.scss'
 
 import '@fontsource/montserrat/700.css'
@@ -20,6 +21,7 @@ function App() {
         <SkillsStrip />
         <Projects />
         <About />
+        <Contact />
       </main>
     </div>
   )

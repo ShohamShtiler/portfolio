@@ -7,7 +7,7 @@ function Hero() {
 
         <div className="hero__content">
           <h1 className="hero__greeting">
-            Hello<span className="hero__dot">.</span>
+            Hello<span className="hero__dot"> .</span>
           </h1>
 
           <div className="hero__intro-wrap">
@@ -15,11 +15,6 @@ function Hero() {
           </div>
 
           <h2 className="hero__role">Full-Stack Developer</h2>
-
-          <p className="hero__bio">
-            I design and build clean, fast web applications —
-            from polished UIs to solid back-end logic.
-          </p>
 
           <div className="hero__ctas">
             <a href="#projects" className="btn btn--primary">See my work</a>
