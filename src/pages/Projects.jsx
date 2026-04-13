@@ -19,13 +19,18 @@ function ProjectVisual({ project }) {
 }
 
 function ProjectCard({ project, reverse }) {
+  // visual column: left when normal, right when reversed
+  const visualReveal = reverse ? 'reveal--from-right' : 'reveal--from-left'
+  // info column: right when normal, left when reversed
+  const infoReveal = reverse ? 'reveal--from-left' : 'reveal--from-right'
+
   return (
     <article className={`project ${reverse ? 'project--reverse' : ''}`}>
-      <div className="project__visual">
+      <div className={`project__visual ${visualReveal}`} style={{ '--reveal-delay': '200ms' }}>
         <ProjectVisual project={project} />
       </div>
 
-      <div className="project__info">
+      <div className={`project__info ${infoReveal}`}>
         <div className="project__header">
           <h3 className="project__name">{project.name}</h3>
           {project.status && (
@@ -70,9 +75,8 @@ function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header reveal">
           <h2 className="section-title">Projects</h2>
-          {/* Vertical indicator added here */}
           <div className="section-divider">
             <span className="line"></span>
             <span className="dot"></span>

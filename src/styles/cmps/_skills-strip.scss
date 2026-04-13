@@ -1,5 +1,5 @@
 .skills-strip {
-  border-top: 1px solid var(--color-border);
+  background-color: #161922;
 
   &__inner {
     display: flex;
@@ -29,12 +29,7 @@
 
   @media (max-width: 40rem) {
     &__inner {
-      overflow-x: auto;
-      justify-content: flex-start;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      scrollbar-width: none;
-
+      display: none;
       &::-webkit-scrollbar {
         display: none;
       }

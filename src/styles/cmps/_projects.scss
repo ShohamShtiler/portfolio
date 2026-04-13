@@ -172,9 +172,17 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
 
+    .project__info {
+    order: 1;
+  }
+
+  .project__visual {
+    order: 2;
+  }
+
     &--reverse {
-      .project__visual { order: 1; }
-      .project__info   { order: 2; }
+      .project__visual { order: 2; }
+      .project__info   { order: 1; }
     }
   }
 }

@@ -1,0 +1,63 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal--from-left {
+  opacity: 0;
+  transform: translateX(-2.25rem);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal--from-right {
+  opacity: 0;
+  transform: translateX(2.25rem);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 52rem) {
+  // On mobile the columns stack — directional slides look wrong, fall back to fade-up
+  .reveal--from-left,
+  .reveal--from-right {
+    transform: translateY(1.5rem);
+
+    &.is-visible {
+      transform: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal--from-left,
+  .reveal--from-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

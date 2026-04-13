@@ -41,10 +41,14 @@ function About() {
 
             {/* Items: icon + text, separate column */}
             <div className="about__items">
-              {highlights.map((item) => {
+              {highlights.map((item, i) => {
                 const Icon = item.icon
                 return (
-                  <div key={item.title} className="about__tl-item">
+                  <div
+                    key={item.title}
+                    className="about__tl-item reveal"
+                    style={{ '--reveal-delay': `${i * 120}ms` }}
+                  >
                     <Icon className="about__tl-icon" />
                     <div className="about__tl-body">
                       <h4 className="about__tl-title">{item.title}</h4>
@@ -58,9 +62,9 @@ function About() {
           </div>
 
           <div className="about__right">
-            <h2 className="about__title">About Me</h2>
+            <h2 className="about__title reveal">{`About Me`}</h2>
 
-            <div className="about__text">
+            <div className="about__text reveal" style={{ '--reveal-delay': '100ms' }}>
               <p className="about__intro">
                 I'm a Full-Stack Developer building clean, fast, and user-focused web apps.
               </p>
@@ -72,8 +76,12 @@ function About() {
             </div>
 
             <ul className="about__skills-grid">
-              {skills.map((skill) => (
-                <li key={skill} className="about__skill-card">
+              {skills.map((skill, i) => (
+                <li
+                  key={skill}
+                  className="about__skill-card reveal"
+                  style={{ '--reveal-delay': `${200 + i * 60}ms` }}
+                >
                   {skill}
                 </li>
               ))}

@@ -9,7 +9,7 @@ export const projects = [
     id: 'minday',
     name: 'Minday',
     description:
-      'A Monday.com-inspired work management platform with drag-and-drop boards, real-time updates, and advanced team collaboration features.',
+      'A full-featured work management platform inspired by Monday.com, featuring real-time collaboration, drag-and-drop boards, and advanced task workflows.',
     tech: ['React', 'Redux', 'Node.js', 'MongoDB', 'Socket.IO'],
     status: null,
     github: 'https://github.com/ShohamShtiler/Minday',
@@ -20,7 +20,7 @@ export const projects = [
     id: 'mister-toy',
     name: 'Mister Toy',
     description:
-      'Full-stack e-commerce app for managing toys, including CRUD operations, filtering, authentication, and real-time chat.',
+      'Full-stack toy management platform featuring CRUD operations, filtering, authentication, and real-time chat.',
     tech: ['React', 'Node.js', 'MongoDB', 'Socket.IO'],
     status: null,
     github: 'https://github.com/ShohamShtiler/Mistertoy',

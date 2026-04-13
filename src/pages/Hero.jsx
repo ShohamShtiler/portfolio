@@ -5,7 +5,7 @@ function Hero() {
     <section id="home" className="hero">
       <div className="hero__container container">
 
-        <div className="hero__content">
+        <div className="hero__content reveal">
           <h1 className="hero__greeting">
             Hello<span className="hero__dot"> .</span>
           </h1>
@@ -29,7 +29,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="hero__visual">
+        <div className="hero__visual reveal" style={{ '--reveal-delay': '150ms' }}>
           <div className="hero__portrait">
             <div className="hero__portrait-frame">
               <img

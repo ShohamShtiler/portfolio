@@ -30,10 +30,12 @@
 
     a {
       font-size: 1rem;
+      font-weight: 500;
       color: var(--color-text);
       transition: color 0.2s;
 
-      &:hover {
+      &:hover,
+      &.is-active {
         color: var(--color-accent);
       }
     }

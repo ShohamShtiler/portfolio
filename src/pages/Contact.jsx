@@ -23,45 +23,51 @@ function LinkedInIcon() {
   )
 }
 
+const icons = [
+  {
+    href: 'mailto:shtilershoham@gmail.com',
+    label: 'Send email',
+    Icon: EmailIcon,
+  },
+  {
+    href: 'https://github.com/ShohamShtiler',
+    label: 'GitHub profile',
+    Icon: GitHubIcon,
+    external: true,
+  },
+  {
+    href: 'https://www.linkedin.com/in/shoham-shtiler-24a8b0374/',
+    label: 'LinkedIn profile',
+    Icon: LinkedInIcon,
+    external: true,
+  },
+]
+
 function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <div className="contact__header">
-          {/* <p className="contact__label">Contact</p> */}
+        <div className="contact__header reveal">
           <h2 className="contact__title">Get in touch</h2>
         </div>
 
-        <p className="contact__text">
+        <p className="contact__text reveal" style={{ '--reveal-delay': '100ms' }}>
           Feel free to reach out if you want to collaborate or just say hi.
         </p>
 
         <div className="contact__icons">
-          <a
-            href="mailto:shtilershoham@gmail.com"
-            className="contact__icon-link"
-            aria-label="Send email"
-          >
-            <EmailIcon />
-          </a>
-          <a
-            href="https://github.com/ShohamShtiler"
-            className="contact__icon-link"
-            aria-label="GitHub profile"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GitHubIcon />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/shoham-shtiler-24a8b0374/"
-            className="contact__icon-link"
-            aria-label="LinkedIn profile"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <LinkedInIcon />
-          </a>
+          {icons.map(({ href, label, Icon, external }, i) => (
+            <a
+              key={label}
+              href={href}
+              className="contact__icon-link reveal"
+              aria-label={label}
+              style={{ '--reveal-delay': `${200 + i * 80}ms` }}
+              {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+            >
+              <Icon />
+            </a>
+          ))}
         </div>
       </div>
     </section>
