@@ -1,16 +1,53 @@
-# React + Vite
+# Shoham Shtiler – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 Live Demo: https://shoham-shtiler.onrender.com
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About
 
-## React Compiler
+This is my personal portfolio website, built to showcase my projects, skills, and experience as a Full-Stack Developer.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The site focuses on clean UI, smooth animations, and a modern user experience.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- Vite
+- SCSS
+- JavaScript (ES6+)
+
+---
+
+## Features
+
+- Smooth scroll navigation
+- Reveal animations on scroll
+- Responsive design (mobile + desktop)
+- Project showcase with live demos and GitHub links
+- Clean and modern UI/UX
+
+---
+
+## Projects Included
+
+### Minday
+A full-stack work management platform inspired by Monday.com, featuring real-time collaboration, drag-and-drop boards, and advanced task workflows.
+
+### Mister Toy
+Full-stack toy management platform with CRUD operations, filtering, authentication, and real-time chat.
+
+### Momentum
+Modern productivity dashboard (in progress) for tracking habits, goals, and daily progress.
+
+---
+
+## Getting Started
+
+To run locally:
+
+```bash
+npm install
+npm run dev
